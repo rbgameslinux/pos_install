@@ -55,7 +55,7 @@ echo
 echo
 echo   
     sudo pacman -Syu --noconfirm ; sudo pacman -R dunst --noconfirm ; sudo pacman -S --needed\
-    git wget unzip gum rofi wofi unrar okular gwenview\
+    it wget unzip gum rofi wofi unrar okular gwenview\
     waybar swww dolphin dolphin-plugins ark firefox\
     swaync loupe xdg-desktop-portal xdg-desktop-portal-gnome\
     xdg-desktop-portal-gtk xdg-desktop-portal-hyprland\
@@ -117,21 +117,21 @@ echo
 echo
 echo
 echo "Instalando o suporte ao aur-helper com paru"
+sleep 5
 echo
 echo
-echoo
     git clone https://aur.archlinux.org/paru-bin.git
     cd paru-bin
     makepkg -si --noconfirm
     cd ..
 echo
 echo
-echo
+sleep 7
     #Instalar pacotes do aur com paru 
 echo "Por questões de segurança e falhas"
 echo "eu opitei por confirmar manualmente todos os pacotes do aur"
 echo
-echo
+sleep 10
     paru -S \
     wlogout \
     swayosd-git \
@@ -264,12 +264,17 @@ fi
 
         #Extraindo nas suas localizações.
         #exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
+sleep 30
 
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
     tar -xzvf rodrigo_configs.tar.gz
+
+sleep 10
+
     cp -r ~/rodrigo_configs/* ~/.config
 
+sleep 15
     rm -fr rodrigo_configs
     rm simple-sddm-2.tar.gz sddm.conf.tar.gz rodrigo_configs.tar.gz
 

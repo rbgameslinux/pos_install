@@ -277,7 +277,11 @@ echo "Reiniciando"
 echo
 echo
 echo
-        reboot -f
+echo "Pressione Enter para reiniciar, ou CTRL+C para cancelar."
+read -p ""
+echo
+echo
+sudo reboot
 
 ###################final do script #########################
 
@@ -290,7 +294,3 @@ else
   echo "Você não concordou. O script será encerrado."
   exit 1
 fi
-
-
-
-

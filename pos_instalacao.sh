@@ -79,7 +79,8 @@ echo
     mesa-utils glfw-wayland vulkan-tools mesa-vdpau lib32-mesa-vdpau\
     lvm2 zip timeshift dosfstools linux-lts-headers linux-zen-headers\
     steam lutris gimp antimicrox celluloid mpv vlc android-tools hyprutils\
-    hyprland-qtutils qt6-5compat qt6-declarative qt6-svg sddm --noconfirm 
+    hyprland-qtutils qt6-5compat qt6-declarative qt6-svg sddm gnome-disk-utility\
+    gnome-calendar gnome-calculator --noconfirm 
 
 elif [ "$resposta" == "n" ]; then
         # Executa o comando se a resposta for "não"
@@ -112,7 +113,8 @@ echo
     lib32-mesa-vdpau lvm2 kitty zip timeshift dosfstools lutris\
     linux-lts-headers linux-zen-headers steam mesa gimp antimicrox\
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
-    qt6-declarative qt6-svg --noconfirm
+    qt6-declarative qt6-svg gnome-disk-utility gnome-calendar\
+    gnome-calculator --noconfirm
 
     #instalar o paru p/ter suporte ao aur.
 echo
@@ -129,37 +131,41 @@ echo
 echo
 echo
 sleep 7
+echo
+echo
     #Instalar pacotes do aur com paru 
 echo "Por questões de segurança e falhas"
 echo "eu opitei por confirmar manualmente todos os pacotes do aur"
 echo
 sleep 10
-   # paru -S \
-  # swayosd-git \
-    # waypaper \
-    #hyprswitch \
-    #qt5ct-kde \
-    #qt6ct-kde \
-    #grimblast \
-    #protonup-qt-bin \
-    #ventoy \
-    #obs-studio-tytan652 \
-    #obs-vkcapture \
-    #winff \
-    #droidcam \
-    #v4l2loopback-dc-dkms \
-    #google-chrome \
-    #brave-bin \
-    #stremio \
-    #opencl-amd \
-    #deckboard-bin \
-    #r-linux \
-    #heroic-games-launcher-bin \
-    #jamesdsp-pipewire-bin \
-    #terabox-bin \
-    #clipman \
-    #clipse \
-    #visual-studio-code-bin
+echo
+echo
+    paru -S \
+    swayosd-git \
+    waypaper \
+    hyprswitch \
+    qt5ct-kde \
+    qt6ct-kde \
+    grimblast \
+    protonup-qt-bin \
+    ventoy \
+    obs-studio-tytan652 \
+    obs-vkcapture \
+    winff \
+    droidcam \
+    v4l2loopback-dc-dkms \
+    google-chrome \
+    brave-bin \
+    stremio \
+    opencl-amd \
+    deckboard-bin \
+    r-linux \
+    heroic-games-launcher-bin \
+    jamesdsp-pipewire-bin \
+    terabox-bin \
+    clipman \
+    clipse \
+    visual-studio-code-bin
 echo
 echo
 echo
@@ -182,14 +188,43 @@ echo
         #Extraindo nas suas localizações.
         #exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
 sleep 5
+echo
+    sudo mkdir /mnt/Rodrigo000
+    sudo mkdir /mnt/Rodrigo001
+    sudo mkdir /mnt/Rodrigo002
+    sudo mkdir /mnt/Rodrigo003
+    sudo mkdir /mnt/Rodrigo004
+    sudo mkdir /mnt/Rodrigo005
+    sudo mkdir /mnt/Rodrigo006
+sleep 3
+echo
+    sudo chmod + /mnt/Rodrigo000
+    sudo chmod + /mnt/Rodrigo001
+    sudo chmod + /mnt/Rodrigo002
+    sudo chmod + /mnt/Rodrigo003
+    sudo chmod + /mnt/Rodrigo004
+    sudo chmod + /mnt/Rodrigo005
+    sudo chmod + /mnt/Rodrigo006
+sleep 3
+echo
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo000
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo001
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo002
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo003
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo004
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo005
+    sudo chown rodrigo:rodrigo /mnt//Rodrigo006
+sleep 3
+echo
+
     cd ~/pos_install
     
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
     tar -xzvf rodrigo_configs.tar.gz
-    
+echo    
 sleep 5
- 
+echo 
      sudo cp -r rodrigo_configs/* ~/.config
 
 sleep 7

@@ -23,11 +23,13 @@ echo "Este script fará alterações no seu sistema."
 echo "Ele instalará pacotes e irá adicionar o usuário ao grupo 'wheel'."
 echo "Este script foi feito para uso pessoal mais nada impede de vocês usa-lo."
 echo "Lembrando que ele foi feito para instalações minimal e completa do archlinux com hyprland"
+echo "Este script só pode ser usado em placas de video AMD"
+echo "ATENCÃO SÓ GPU AMD"
 echo "utilize por sua conta e risco"
 echo "Tem certeza de que deseja prosseguir."
 echo
 echo "Se você não concorda, digite 'não' ou 'n'."
-echo "Se concorda, digite 'sim' ou 'y' para continuar."
+echo "Se concorda, digite 'sim' ou 's' para continuar."
 echo
 
     # confirmação do usuário
@@ -37,7 +39,7 @@ read -p "Você concorda em continuar? (sim/não): " resposta
 resposta=$(echo "$resposta" | tr '[:upper:]' '[:lower:]')
 
     # Verificar a resposta
-if [[ "$resposta" == "sim" || "$resposta" == "y" ]]; then
+if [[ "$resposta" == "sim" || "$resposta" == "s" ]]; then
   echo "Você concordou! Continuando..."
 
                     # seu script aqui
@@ -50,7 +52,7 @@ read resposta
 # Condicional para verificar a resposta
 if [ "$resposta" == "s" ]; then
         # Executa o comando se a resposta for "sim"
-    echo "Você escolheu SIM. Executando a ação de adicionais"
+    echo "Você escolheu SIM. Executando a instalação de adicionais"
 echo
 echo
 echo   
@@ -81,7 +83,7 @@ echo
 
 elif [ "$resposta" == "n" ]; then
         # Executa o comando se a resposta for "não"
-    echo "Você escolheu NÃO. Executando a ação B..."
+    echo "Você escolheu NÃO. Executando a instalação sobre com xorg"
 echo
 echo
 echo    
@@ -188,7 +190,7 @@ sleep 5
     
 sleep 5
  
-     cp -r rodrigo_configs/* ~/.config
+     sudo cp -r rodrigo_configs/* ~/.config
 
 sleep 7
 echo

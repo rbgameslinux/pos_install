@@ -140,21 +140,22 @@ echo
     qt5ct-kde \
     qt6ct-kde \
     grimblast \
-    protonup-qt-bin \
-    ventoy \
-    obs-studio-tytan652 \
-    obs-vkcapture \
-    winff \
-    droidcam \
-    v4l2loopback-dc-dkms \
-    google-chrome \
-    brave-bin \
-    stremio \
-    opencl-amd \
-    deckboard-bin \
-    r-linux \
-    heroic-games-launcher-bin \
-    jamesdsp-pipewire-bin \
+    #protonup-qt-bin \
+    #ventoy \
+    #obs-studio-tytan652 \
+    #obs-vkcapture \
+    #winff \
+    #droidcam \
+    #v4l2loopback-dc-dkms \
+    #google-chrome \
+    #brave-bin \
+    #stremio \
+    #opencl-amd \
+    #deckboard-bin \
+    #r-linux \
+    #heroic-games-launcher-bin \
+    #jamesdsp-pipewire-bin \
+    #terabox-bin \
     clipman \
     clipse \
     visual-studio-code-bin
@@ -181,7 +182,7 @@ echo
 
         #rodrigo_config
 
-    URL="https://download843.mediafire.com/4z777ly48zmgCtZVLXUSCUr_XQe7M7NPqGlucVhy9nTUUoGVV5yPPGUJHn5hy-YCPa13lflZpmGeqY6YTcGYzGbI6LxBomJG-hqWaH81hSB2uqz0L_4MZrVNM8kbzxX362meyH2SUik9RhJCER91gUv-uVyhM_-xeVSkKjAS_C9W-l8/avq2wbf4lv7y1k5/rodrigo_configs.tar.gz"
+    URL="https://drive.google.com/uc?export=download&id=1bYU1-KEMLfZb12d9C_qcqoTt2zwLL4f_"
     DIRETORIO="$HOME/"
     NOME_ARQUIVO="rodrigo_configs.tar.gz"
 echo
@@ -189,7 +190,7 @@ echo
 echo
         # Baixando o arquivo com wget
 echo "Iniciando download..."
-    wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
+    wget --no-check-certificate -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
 
         # Verificando se o download foi concluído com sucesso
 if [ $? -eq 0 ]; then
@@ -210,13 +211,13 @@ fi
 
         #sddm.conf
 
-    URL="https://download947.mediafire.com/txcayt28x0vgLmLsLk1x-v5aN8yk4l1-ytRetmYazE5i10oY5eSZAeoEzjsXgc7KApwRKgM5-QRf_FamAC0LtBaNspaScadbGAq8MblLH8TDUFKqevbpqDVtAcyW36umAtcaKCidTPDZpl4SZI-BXH6RJn4kr2jP7eHVVfkK88syQOQ/gg2xgdjnl5sr2uh/sddm.conf.tar.gz"
+    URL="https://drive.google.com/uc?export=download&id=1BpN10ytCgqDAakm52yoZO3Z59bXffUhn"
     DIRETORIO="$HOME/"
     NOME_ARQUIVO="sddm.conf.tar.gz"
 
         # Baixando o arquivo com wget
 echo "Iniciando download..."
-    wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
+    wget --no-check-certificate -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
 
         # Verificando se o download foi concluído com sucesso
 if [ $? -eq 0 ]; then
@@ -237,12 +238,12 @@ fi
 
         #simple-sddm-2
 
-    URL="https://download1648.mediafire.com/s3nsttf5y5vghX7MYSrXWG21PWuto2ovky2y_bK1NyrJn3cgcfQGnB5g0mZYCDb3Ye3xhtpj8xtjyIIvXSmn9PWV0fmMFSS-9tF8w4KPwFAnMOKgDCYRz0JSgiVxlb07fxSFDgjuftj0I9jWuI1MHYbyLys-EBF7J7Do2DmflirRSC4/8eb1z6m45kji9cu/simple-sddm-2.tar.gz"
+    URL="https://drive.google.com/uc?export=download&id=1ecf2SrQITkqHuFJzmDdSRd_vOYDdaLOA"
     DIRETORIO="$HOME/"
     NOME_ARQUIVO="simple-sddm-2.tar.gz"
 
 echo "Iniciando download..."
-    wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
+    wget --no-check-certificate -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
 
         # Verificando se o download foi concluído com sucesso
 if [ $? -eq 0 ]; then

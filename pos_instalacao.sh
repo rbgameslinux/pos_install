@@ -119,7 +119,7 @@ elif [ "$resposta" == "n" ]; then
 
 #Instalar pacotes do aur com paru 
 echo "Por questões de segurança e falhas"
-echo "eu opitei por confirmar manualmente todos os pacotes do aur "
+echo "eu opitei por confirmar manualmente todos os pacotes do aur"
 
 paru -S \
 wlogout \
@@ -146,8 +146,7 @@ heroic-games-launcher-bin \
 jamesdsp-pipewire-bin \
 clipman \
 clipse \
-visual-studio-code-bin \
-hyprland-qtutils-git 
+visual-studio-code-bin 
 
 # Obter o nome do usuário atual
 usuario=$(whoami)
@@ -192,7 +191,7 @@ fi
 
 #sddm.conf
 
-URL="https://download947.mediafire.com/oxd97s726o7gWpbCsRCbCOsWtz2EXK81UcqyMBkTlGLfgJNBEKTk92k6mFAkGFL4y24VoFA_Nv1EGMcYMAoMP333MuVqkBPtWd_x_sUrWrVxEiofv-doiSv1uLIcXxXhy0PG4IFLp7Id10hgWhSfQKzYEBY3dbWG1shMya2DcUnJB9M/q3f6l86srrtm8qr/sddm.conf.tar.gz"
+URL="https://download947.mediafire.com/txcayt28x0vgLmLsLk1x-v5aN8yk4l1-ytRetmYazE5i10oY5eSZAeoEzjsXgc7KApwRKgM5-QRf_FamAC0LtBaNspaScadbGAq8MblLH8TDUFKqevbpqDVtAcyW36umAtcaKCidTPDZpl4SZI-BXH6RJn4kr2jP7eHVVfkK88syQOQ/gg2xgdjnl5sr2uh/sddm.conf.tar.gz"
 DIRETORIO="$HOME/"
 NOME_ARQUIVO="sddm.conf.tar.gz"
 
@@ -215,8 +214,8 @@ fi
 
 #simple-sddm-2
 
-URL="https://download1648.mediafire.com/9lb3138pzs9gVkGJvS1RqXGbRx5RubeOAB0PKeLZaH_WAECtizK0R3YYwO-TDug23TenzZzZ8Van6X3sp3jznv3RLd_uu3fvB6CpDg8Rr_1-zWWTYtkd6EuJL7kR4wY1xBpVSEBiNzLmhfG-Pyar44g2gKsyiy5F_kl53uhmeh-0xh4/efljokyyv2huhyu/simple-sddm-2.tar.gz"
-DIRETORIO="HOME/"
+URL="https://download1648.mediafire.com/s3nsttf5y5vghX7MYSrXWG21PWuto2ovky2y_bK1NyrJn3cgcfQGnB5g0mZYCDb3Ye3xhtpj8xtjyIIvXSmn9PWV0fmMFSS-9tF8w4KPwFAnMOKgDCYRz0JSgiVxlb07fxSFDgjuftj0I9jWuI1MHYbyLys-EBF7J7Do2DmflirRSC4/8eb1z6m45kji9cu/simple-sddm-2.tar.gz"
+DIRETORIO="$HOME/"
 NOME_ARQUIVO="simple-sddm-2.tar.gz"
 
 echo "Iniciando download..."
@@ -247,8 +246,7 @@ rm simple-sddm-2.tar.gz sddm.conf.tar.gz rodrigo_configs.tar.gz
 echo "Vamos reiniciar sua maquina e estára pronta para uso"
 echo "Obrigado"
 
-ceho "Reiniciando" 
-sleep 3
+echo "Reiniciando" 
 reboot -f
 
 ###################final do script #########################

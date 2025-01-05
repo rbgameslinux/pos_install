@@ -180,15 +180,24 @@ echo
         #Extraindo nas suas localizações.
         #exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
 sleep 5
-    cd pos_install
+    cd ~/pos_install
     
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
     tar -xzvf rodrigo_configs.tar.gz
+    
+sleep 5
+ 
+     cp -r rodrigo_configs/* ~/.config
 
 sleep 7
+echo
 cd ~/
+echo
+echo
+
 rm -fr pos_install
+
 echo "Vamos reiniciar a sua maquina e após isso estára pronta para uso"
 echo "Obrigado"
 echo

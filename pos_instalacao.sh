@@ -132,14 +132,13 @@ echo "Por questões de segurança e falhas"
 echo "eu opitei por confirmar manualmente todos os pacotes do aur"
 echo
 sleep 10
-    paru -S \
-    wlogout \
-    swayosd-git \
-    waypaper \
-    hyprswitch \
-    qt5ct-kde \
-    qt6ct-kde \
-    grimblast \
+   # paru -S \
+  # swayosd-git \
+    # waypaper \
+    #hyprswitch \
+    #qt5ct-kde \
+    #qt6ct-kde \
+    #grimblast \
     #protonup-qt-bin \
     #ventoy \
     #obs-studio-tytan652 \
@@ -156,9 +155,9 @@ sleep 10
     #heroic-games-launcher-bin \
     #jamesdsp-pipewire-bin \
     #terabox-bin \
-    clipman \
-    clipse \
-    visual-studio-code-bin
+    #clipman \
+    #clipse \
+    #visual-studio-code-bin
 echo
 echo
 echo
@@ -178,106 +177,18 @@ echo
 
     systemctl enable sddm.service
 
-        #baixando as minhas configs
-
-        #rodrigo_config
-
-    URL="https://drive.google.com/uc?export=download&id=1mKm46aZkwfpoR2fHoZKj10ZaA4zfxZmK"
-    DIRETORIO="$HOME/"
-    NOME_ARQUIVO="rodrigo_configs.tar.gz"
-echo
-echo
-echo
-        # Baixando o arquivo com wget
-echo "Iniciando download..."
-    wget --no-check-certificate -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
-
-        # Verificando se o download foi concluído com sucesso
-if [ $? -eq 0 ]; then
-    echo "Download concluído com sucesso!"
-    echo
-    echo
-    echo
-        # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
-    notify-send "Download Concluído" "O arquivo foi baixado com sucesso para $DIRETORIO/$NOME_ARQUIVO."
-else
-    echo "Houve um erro durante o download."
-    echo
-    echo
-    echo
-        # Enviar uma notificação de erro (se necessário)
-    notify-send "Erro no Download" "Ocorreu um erro ao tentar baixar o arquivo."
-fi
-
-        #sddm.conf
-
-    URL="https://drive.google.com/uc?export=download&id=1qPXdOdc4J-aY7eZvdq94roqNXZhIUoMj"
-    DIRETORIO="$HOME/"
-    NOME_ARQUIVO="sddm.conf.tar.gz"
-
-        # Baixando o arquivo com wget
-echo "Iniciando download..."
-    wget --no-check-certificate -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
-
-        # Verificando se o download foi concluído com sucesso
-if [ $? -eq 0 ]; then
-    echo "Download concluído com sucesso!"
-    echo
-    echo
-    echo
-        # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
-    notify-send "Download Concluído" "O arquivo foi baixado com sucesso para $DIRETORIO/$NOME_ARQUIVO."
-else
-    echo "Houve um erro durante o download."
-    echo
-    echo
-    echo
-        # Enviar uma notificação de erro (se necessário)
-    notify-send "Erro no Download" "Ocorreu um erro ao tentar baixar o arquivo."
-fi
-
-        #simple-sddm-2
-
-    URL="https://drive.google.com/uc?export=download&id=1mvH1vfQzwRt5SQjRdRKIp803n2mMM8E_"
-    DIRETORIO="$HOME/"
-    NOME_ARQUIVO="simple-sddm-2.tar.gz"
-
-echo "Iniciando download..."
-    wget --no-check-certificate -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
-
-        # Verificando se o download foi concluído com sucesso
-if [ $? -eq 0 ]; then
-    echo "Download concluído com sucesso!"
-    echo
-    echo
-    echo
-        # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
-    notify-send "Download Concluído" "O arquivo foi baixado com sucesso para $DIRETORIO/$NOME_ARQUIVO."
-else
-    echo "Houve um erro durante o download."
-    echo
-    echo
-    echo
-        # Enviar uma notificação de erro (se necessário)
-    notify-send "Erro no Download" "Ocorreu um erro ao tentar baixar o arquivo."
-fi
-
         #Extraindo nas suas localizações.
         #exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
-sleep 30
-
+sleep 5
+    cd pos_install
+    
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
     tar -xzvf rodrigo_configs.tar.gz
 
-sleep 10
-
-    cp -r ~/rodrigo_configs/* ~/.config
-
-sleep 15
-    rm -fr rodrigo_configs
-    rm simple-sddm-2.tar.gz sddm.conf.tar.gz rodrigo_configs.tar.gz
-
+sleep 7
+cd ~/
+rm -fr pos_install
 echo "Vamos reiniciar a sua maquina e após isso estára pronta para uso"
 echo "Obrigado"
 echo

@@ -182,7 +182,7 @@ echo
 
         #rodrigo_config
 
-    URL="https://drive.google.com/uc?export=download&id=1bYU1-KEMLfZb12d9C_qcqoTt2zwLL4f_"
+    URL="https://drive.google.com/uc?export=download&id=1mKm46aZkwfpoR2fHoZKj10ZaA4zfxZmK"
     DIRETORIO="$HOME/"
     NOME_ARQUIVO="rodrigo_configs.tar.gz"
 echo
@@ -211,7 +211,7 @@ fi
 
         #sddm.conf
 
-    URL="https://drive.google.com/uc?export=download&id=1BpN10ytCgqDAakm52yoZO3Z59bXffUhn"
+    URL="https://drive.google.com/uc?export=download&id=1qPXdOdc4J-aY7eZvdq94roqNXZhIUoMj"
     DIRETORIO="$HOME/"
     NOME_ARQUIVO="sddm.conf.tar.gz"
 
@@ -238,7 +238,7 @@ fi
 
         #simple-sddm-2
 
-    URL="https://drive.google.com/uc?export=download&id=1ecf2SrQITkqHuFJzmDdSRd_vOYDdaLOA"
+    URL="https://drive.google.com/uc?export=download&id=1mvH1vfQzwRt5SQjRdRKIp803n2mMM8E_"
     DIRETORIO="$HOME/"
     NOME_ARQUIVO="simple-sddm-2.tar.gz"
 
@@ -267,11 +267,13 @@ fi
 
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
-    tar -xzvf rodrigo_configs.tar.gz -C ~/.conf
+    tar -xzvf rodrigo_configs.tar.gz
+    cp -r ~/rodrigo_configs/* ~/.config
 
+    rm -fr rodrigo_configs
     rm simple-sddm-2.tar.gz sddm.conf.tar.gz rodrigo_configs.tar.gz
 
-echo "Vamos reiniciar sua maquina e estára pronta para uso"
+echo "Vamos reiniciar a sua maquina e após isso estára pronta para uso"
 echo "Obrigado"
 echo
 echo "Reiniciando" 

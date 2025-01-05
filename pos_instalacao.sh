@@ -6,7 +6,7 @@
 #       E-mail = rbgameslinux@gmail.com                                  #
 ##########################################################################
 
-# Exibir "leia-me"
+    # Exibir "leia-me"
 clear
 echo "==============================="
 echo "     LEIA-ME ANTES DE USAR     "
@@ -30,16 +30,15 @@ echo "Se você não concorda, digite 'não' ou 'n'."
 echo "Se concorda, digite 'sim' ou 'y' para continuar."
 echo
 
-# confirmação do usuário
+    # confirmação do usuário
 read -p "Você concorda em continuar? (sim/não): " resposta
 
-# Converter para minúsculas 
+    # Converter para minúsculas 
 resposta=$(echo "$resposta" | tr '[:upper:]' '[:lower:]')
 
-# Verificar a resposta
+    # Verificar a resposta
 if [[ "$resposta" == "sim" || "$resposta" == "y" ]]; then
   echo "Você concordou! Continuando..."
-
 
                     # seu script aqui
  #######################################################################                   
@@ -50,11 +49,12 @@ read resposta
 
 # Condicional para verificar a resposta
 if [ "$resposta" == "s" ]; then
-    # Executa o comando se a resposta for "sim"
+        # Executa o comando se a resposta for "sim"
     echo "Você escolheu SIM. Executando a ação de adicionais"
-   
-   
-   sudo pacman -Syu --noconfirm ; sudo pacman -R dunst --noconfirm ; sudo pacman -S --needed\
+echo
+echo
+echo   
+    sudo pacman -Syu --noconfirm ; sudo pacman -R dunst --noconfirm ; sudo pacman -S --needed\
     git wget unzip gum rofi wofi unrar okular gwenview\
     waybar swww dolphin dolphin-plugins ark firefox\
     swaync loupe xdg-desktop-portal xdg-desktop-portal-gnome\
@@ -80,9 +80,11 @@ if [ "$resposta" == "s" ]; then
     hyprland-qtutils qt6-5compat qt6-declarative qt6-svg sddm --noconfirm 
 
 elif [ "$resposta" == "n" ]; then
-    # Executa o comando se a resposta for "não"
+        # Executa o comando se a resposta for "não"
     echo "Você escolheu NÃO. Executando a ação B..."
-        
+echo
+echo
+echo    
     sudo pacman -Syu --noconfirm ; sudo pacman -S --needed\
     git wget unzip gum rofi wofi unrar okular gwenview\
     waybar swww dolphin dolphin-plugins ark firefox\
@@ -110,142 +112,169 @@ elif [ "$resposta" == "n" ]; then
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
     qt6-declarative qt6-svg --noconfirm
 
-#instalar o paru p/ter suporte ao aur.
-
+    #instalar o paru p/ter suporte ao aur.
+echo
+echo
+echo
+echo "Instalando o suporte ao aur-helper com paru"
+echo
+echo
+echoo
     git clone https://aur.archlinux.org/paru-bin.git
     cd paru-bin
     makepkg -si --noconfirm
     cd ..
-
-#Instalar pacotes do aur com paru 
+echo
+echo
+echo
+    #Instalar pacotes do aur com paru 
 echo "Por questões de segurança e falhas"
 echo "eu opitei por confirmar manualmente todos os pacotes do aur"
+echo
+echo
+    paru -S \
+    wlogout \
+    swayosd-git \
+    waypaper \
+    hyprswitch \
+    qt5ct-kde \
+    qt6ct-kde \
+    grimblast \
+    protonup-qt-bin \
+    ventoy \
+    obs-studio-tytan652 \
+    obs-vkcapture \
+    winff \
+    droidcam \
+    v4l2loopback-dc-dkms \
+    google-chrome \
+    brave-bin \
+    stremio \
+    opencl-amd \
+    deckboard-bin \
+    r-linux \
+    heroic-games-launcher-bin \
+    jamesdsp-pipewire-bin \
+    clipman \
+    clipse \
+    visual-studio-code-bin
+echo
+echo
+echo
+        # Obter o nome do usuário atual
+    usuario=$(whoami)
 
-paru -S \
-wlogout \
-swayosd-git \
-waypaper \
-hyprswitch \
-qt5ct-kde \
-qt6ct-kde \
-grimblast \
-protonup-qt-bin \
-ventoy \
-obs-studio-tytan652 \
-obs-vkcapture \
-winff \
-droidcam \
-v4l2loopback-dc-dkms \
-google-chrome \
-brave-bin \
-stremio \
-opencl-amd \
-deckboard-bin \
-r-linux \
-heroic-games-launcher-bin \
-jamesdsp-pipewire-bin \
-clipman \
-clipse \
-visual-studio-code-bin 
+        # Adiciona o usuário ao grupo 'wheel'
+    sudo usermod -aG wheel "$usuario"
 
-# Obter o nome do usuário atual
-usuario=$(whoami)
+        #Só rodar no terminal
+    xdg-user-dirs-update 
 
-# Adiciona o usuário ao grupo 'wheel'
-sudo usermod -aG wheel "$usuario"
+        #coloca o dolphin com padrão do sistema
+    xdg-mime default org.kde.dolphin.desktop inode/directoryxdg-mime default org.kde.dolphin.desktop inode/directory 
 
-#Só rodar no terminal
-xdg-user-dirs-update 
+        #Habilita o sddm
 
-#coloca o dolphin com padrão do sistema
-xdg-mime default org.kde.dolphin.desktop inode/directoryxdg-mime default org.kde.dolphin.desktop inode/directory 
+    systemctl enable sddm.service
 
-#Habilita o sddm
+        #baixando as minhas configs
 
-systemctl enable sddm.service
+        #rodrigo_config
 
-#baixando as minhas configs
-
-#rodrigo_config
-
-URL="https://download843.mediafire.com/4z777ly48zmgCtZVLXUSCUr_XQe7M7NPqGlucVhy9nTUUoGVV5yPPGUJHn5hy-YCPa13lflZpmGeqY6YTcGYzGbI6LxBomJG-hqWaH81hSB2uqz0L_4MZrVNM8kbzxX362meyH2SUik9RhJCER91gUv-uVyhM_-xeVSkKjAS_C9W-l8/avq2wbf4lv7y1k5/rodrigo_configs.tar.gz"
-DIRETORIO="$HOME/"
-NOME_ARQUIVO="rodrigo_configs.tar.gz"
-
-# Baixando o arquivo com wget
+    URL="https://download843.mediafire.com/4z777ly48zmgCtZVLXUSCUr_XQe7M7NPqGlucVhy9nTUUoGVV5yPPGUJHn5hy-YCPa13lflZpmGeqY6YTcGYzGbI6LxBomJG-hqWaH81hSB2uqz0L_4MZrVNM8kbzxX362meyH2SUik9RhJCER91gUv-uVyhM_-xeVSkKjAS_C9W-l8/avq2wbf4lv7y1k5/rodrigo_configs.tar.gz"
+    DIRETORIO="$HOME/"
+    NOME_ARQUIVO="rodrigo_configs.tar.gz"
+echo
+echo
+echo
+        # Baixando o arquivo com wget
 echo "Iniciando download..."
-wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
+    wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
 
-# Verificando se o download foi concluído com sucesso
+        # Verificando se o download foi concluído com sucesso
 if [ $? -eq 0 ]; then
     echo "Download concluído com sucesso!"
-    
-    # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
+    echo
+    echo
+    echo
+        # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
     notify-send "Download Concluído" "O arquivo foi baixado com sucesso para $DIRETORIO/$NOME_ARQUIVO."
 else
     echo "Houve um erro durante o download."
-    
-    # Enviar uma notificação de erro (se necessário)
+    echo
+    echo
+    echo
+        # Enviar uma notificação de erro (se necessário)
     notify-send "Erro no Download" "Ocorreu um erro ao tentar baixar o arquivo."
 fi
 
-#sddm.conf
+        #sddm.conf
 
-URL="https://download947.mediafire.com/txcayt28x0vgLmLsLk1x-v5aN8yk4l1-ytRetmYazE5i10oY5eSZAeoEzjsXgc7KApwRKgM5-QRf_FamAC0LtBaNspaScadbGAq8MblLH8TDUFKqevbpqDVtAcyW36umAtcaKCidTPDZpl4SZI-BXH6RJn4kr2jP7eHVVfkK88syQOQ/gg2xgdjnl5sr2uh/sddm.conf.tar.gz"
-DIRETORIO="$HOME/"
-NOME_ARQUIVO="sddm.conf.tar.gz"
+    URL="https://download947.mediafire.com/txcayt28x0vgLmLsLk1x-v5aN8yk4l1-ytRetmYazE5i10oY5eSZAeoEzjsXgc7KApwRKgM5-QRf_FamAC0LtBaNspaScadbGAq8MblLH8TDUFKqevbpqDVtAcyW36umAtcaKCidTPDZpl4SZI-BXH6RJn4kr2jP7eHVVfkK88syQOQ/gg2xgdjnl5sr2uh/sddm.conf.tar.gz"
+    DIRETORIO="$HOME/"
+    NOME_ARQUIVO="sddm.conf.tar.gz"
 
-# Baixando o arquivo com wget
+        # Baixando o arquivo com wget
 echo "Iniciando download..."
-wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
+    wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
 
-# Verificando se o download foi concluído com sucesso
+        # Verificando se o download foi concluído com sucesso
 if [ $? -eq 0 ]; then
     echo "Download concluído com sucesso!"
-    
-    # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
+    echo
+    echo
+    echo
+        # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
     notify-send "Download Concluído" "O arquivo foi baixado com sucesso para $DIRETORIO/$NOME_ARQUIVO."
 else
     echo "Houve um erro durante o download."
-    
-    # Enviar uma notificação de erro (se necessário)
+    echo
+    echo
+    echo
+        # Enviar uma notificação de erro (se necessário)
     notify-send "Erro no Download" "Ocorreu um erro ao tentar baixar o arquivo."
 fi
 
-#simple-sddm-2
+        #simple-sddm-2
 
-URL="https://download1648.mediafire.com/s3nsttf5y5vghX7MYSrXWG21PWuto2ovky2y_bK1NyrJn3cgcfQGnB5g0mZYCDb3Ye3xhtpj8xtjyIIvXSmn9PWV0fmMFSS-9tF8w4KPwFAnMOKgDCYRz0JSgiVxlb07fxSFDgjuftj0I9jWuI1MHYbyLys-EBF7J7Do2DmflirRSC4/8eb1z6m45kji9cu/simple-sddm-2.tar.gz"
-DIRETORIO="$HOME/"
-NOME_ARQUIVO="simple-sddm-2.tar.gz"
+    URL="https://download1648.mediafire.com/s3nsttf5y5vghX7MYSrXWG21PWuto2ovky2y_bK1NyrJn3cgcfQGnB5g0mZYCDb3Ye3xhtpj8xtjyIIvXSmn9PWV0fmMFSS-9tF8w4KPwFAnMOKgDCYRz0JSgiVxlb07fxSFDgjuftj0I9jWuI1MHYbyLys-EBF7J7Do2DmflirRSC4/8eb1z6m45kji9cu/simple-sddm-2.tar.gz"
+    DIRETORIO="$HOME/"
+    NOME_ARQUIVO="simple-sddm-2.tar.gz"
 
 echo "Iniciando download..."
-wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
+    wget -P "$DIRETORIO" "$URL" -O "$DIRETORIO/$NOME_ARQUIVO"
 
-# Verificando se o download foi concluído com sucesso
+        # Verificando se o download foi concluído com sucesso
 if [ $? -eq 0 ]; then
     echo "Download concluído com sucesso!"
-    
-    # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
+    echo
+    echo
+    echo
+        # Enviar uma notificação (se você estiver em um ambiente gráfico com o notify-send instalado)
     notify-send "Download Concluído" "O arquivo foi baixado com sucesso para $DIRETORIO/$NOME_ARQUIVO."
 else
     echo "Houve um erro durante o download."
-    
-    # Enviar uma notificação de erro (se necessário)
+    echo
+    echo
+    echo
+        # Enviar uma notificação de erro (se necessário)
     notify-send "Erro no Download" "Ocorreu um erro ao tentar baixar o arquivo."
 fi
 
-#Extraindo nas suas localizações.
-#exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
+        #Extraindo nas suas localizações.
+        #exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
 
-sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
-sudo tar -xzvf sddm.conf.tar.gz -C /etc/
-tar -xzvf rodrigo_configs.tar.gz -C ~/.conf
+    sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
+    sudo tar -xzvf sddm.conf.tar.gz -C /etc/
+    tar -xzvf rodrigo_configs.tar.gz -C ~/.conf
 
-rm simple-sddm-2.tar.gz sddm.conf.tar.gz rodrigo_configs.tar.gz
+    rm simple-sddm-2.tar.gz sddm.conf.tar.gz rodrigo_configs.tar.gz
 
 echo "Vamos reiniciar sua maquina e estára pronta para uso"
 echo "Obrigado"
-
+echo
+echo
+echo
 echo "Reiniciando" 
 reboot -f
 

@@ -273,10 +273,11 @@ fi
 echo "Vamos reiniciar sua maquina e estára pronta para uso"
 echo "Obrigado"
 echo
-echo
-echo
 echo "Reiniciando" 
-reboot -f
+echo
+echo
+echo
+        reboot -f
 
 ###################final do script #########################
 

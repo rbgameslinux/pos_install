@@ -80,7 +80,7 @@ echo
     lvm2 zip timeshift dosfstools linux-lts-headers linux-zen-headers\
     steam lutris gimp antimicrox celluloid mpv vlc android-tools hyprutils\
     hyprland-qtutils qt6-5compat qt6-declarative qt6-svg sddm gnome-disk-utility\
-    gnome-calendar gnome-calculator --noconfirm 
+    gnome-calendar gnome-calculator ksnip --noconfirm 
 
 elif [ "$resposta" == "n" ]; then
         # Executa o comando se a resposta for "não"
@@ -114,7 +114,7 @@ echo
     linux-lts-headers linux-zen-headers steam mesa gimp antimicrox\
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
     qt6-declarative qt6-svg gnome-disk-utility gnome-calendar\
-    gnome-calculator --noconfirm
+    gnome-calculator ksnip --noconfirm
 
     #instalar o paru p/ter suporte ao aur.
 echo
@@ -152,19 +152,19 @@ echo
     swaync-git \
     ventoy-bin \
     wlogout \
-   # obs-studio-tytan652 \
-   # obs-vkcapture \
+    obs-studio-tytan652 \
+    obs-vkcapture \
     winff \
-   # droidcam \
-  #  v4l2loopback-dc-dkms \
-    #google-chrome \
-    #brave-bin \
- #   stremio \
-   # opencl-amd \
+    droidcam \
+    v4l2loopback-dc-dkms \
+    google-chrome \
+    brave-bin \
+    stremio \
+    opencl-amd \
     deckboard-bin \
-  #  r-linux \
-   # heroic-games-launcher-bin \
-   visual-studio-code-bin \
+    r-linux \
+    heroic-games-launcher-bin \
+    visual-studio-code-bin \
     jamesdsp-pipewire-bin \
     terabox-bin \
     clipman \
@@ -236,6 +236,7 @@ echo
 sleep 5
 echo 
     cp -r rodrigo_configs/* ~/.config
+    
 echo "Descompactação finalizada com sucesso"
 echo
 

@@ -151,18 +151,18 @@ echo
     protonup-qt-bin \
     swaync-git \
     ventoy-bin \
-    obs-studio-tytan652 \
-    obs-vkcapture \
+   # obs-studio-tytan652 \
+   # obs-vkcapture \
     winff \
-    droidcam \
-    v4l2loopback-dc-dkms \
+   # droidcam \
+  #  v4l2loopback-dc-dkms \
     #google-chrome \
     #brave-bin \
-    stremio \
-    opencl-amd \
+ #   stremio \
+   # opencl-amd \
     deckboard-bin \
-    r-linux \
-    heroic-games-launcher-bin \
+  #  r-linux \
+   # heroic-games-launcher-bin \
     jamesdsp-pipewire-bin \
     terabox-bin \
     clipman \

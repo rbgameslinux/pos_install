@@ -124,10 +124,11 @@ echo "Instalando o suporte ao aur-helper com yay"
 sleep 5
 echo
 echo
+cd $HOME/
     git clone https://aur.archlinux.org/yay-bin.git
-    cd paru-bin
+    cd yay-bin
     makepkg -si --noconfirm
-    cd ..
+    cd $HOME/
 echo
 echo
 sleep 7
@@ -149,14 +150,14 @@ echo
     grimblast \
     protonup-qt-bin \
     swaync-git \
-    ventoy \
+    ventoy-bin \
     obs-studio-tytan652 \
     obs-vkcapture \
     winff \
     droidcam \
     v4l2loopback-dc-dkms \
-    google-chrome \
-    brave-bin \
+    #google-chrome \
+    #brave-bin \
     stremio \
     opencl-amd \
     deckboard-bin \
@@ -225,11 +226,11 @@ echo "Extraindo configurações nas suas devidas pastas"
 echo
 sleep 3
 
-    cd ~/pos_install
+    cd $HOME/pos_install
     
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
-    tar -xzvf rodrigo_configs.tar.gz
+    sudo tar -xzvf rodrigo_configs.tar.gz
 echo    
 sleep 5
 echo 
@@ -239,7 +240,7 @@ echo
 
 sleep 7
 echo
-cd ~/
+cd $HOME/
 echo
 echo
 

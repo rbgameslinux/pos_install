@@ -184,9 +184,9 @@ echo
         #Habilita o sddm
 
     systemctl enable sddm.service
-
-        #Extraindo nas suas localizações.
-        #exemplo   tar -xzvf arquivo.tar.gz -C /caminho/para/a/pasta
+echo
+echo "criando pastas e dando permissões"      
+echo
 sleep 5
 echo
     sudo mkdir /mnt/Rodrigo000
@@ -216,6 +216,13 @@ echo
     sudo chown rodrigo:rodrigo /mnt//Rodrigo006
 sleep 3
 echo
+echo "Finalizado a criação de pastas em /mnt"
+echo
+sleep 2
+echo
+echo "Extraindo configurações nas suas devidas pastas"
+echo
+sleep 3
 
     cd ~/pos_install
     
@@ -226,6 +233,8 @@ echo
 sleep 5
 echo 
      sudo cp -r rodrigo_configs/* ~/.config
+echo "Descompactação finalizada com sucesso"
+echo
 
 sleep 7
 echo

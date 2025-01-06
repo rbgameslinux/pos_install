@@ -164,11 +164,11 @@ echo
     deckboard-bin \
   #  r-linux \
    # heroic-games-launcher-bin \
+   visual-studio-code-bin \
     jamesdsp-pipewire-bin \
     terabox-bin \
     clipman \
-    clipse \
-    visual-studio-code-bin
+    clipse
 echo
 echo
 echo
@@ -231,11 +231,11 @@ sleep 3
     
     sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     sudo tar -xzvf sddm.conf.tar.gz -C /etc/
-    sudo tar -xzvf rodrigo_configs.tar.gz
+    tar -xzvf rodrigo_configs.tar.gz
 echo    
 sleep 5
 echo 
-     sudo cp -r rodrigo_configs/* ~/.config
+    cp -r rodrigo_configs/* ~/.config
 echo "Descompactação finalizada com sucesso"
 echo
 

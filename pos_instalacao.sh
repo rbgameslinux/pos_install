@@ -59,7 +59,7 @@ echo
     sudo pacman -Syu --noconfirm ; sudo pacman -R dunst --noconfirm ; sudo pacman -S --needed\
     it wget unzip gum rofi wofi unrar okular gwenview\
     waybar swww dolphin dolphin-plugins ark firefox\
-    swaync loupe xdg-desktop-portal xdg-desktop-portal-gnome\
+    loupe xdg-desktop-portal xdg-desktop-portal-gnome\
     xdg-desktop-portal-gtk xdg-desktop-portal-hyprland\
     xdg-desktop-portal-wlr xdg-user-dirs xdg-user-dirs-gtk\
     xdg-utils archlinux-xdg-menu btop ttf-font-awesome noto-fonts\
@@ -84,14 +84,14 @@ echo
 
 elif [ "$resposta" == "n" ]; then
         # Executa o comando se a resposta for "não"
-    echo "Você escolheu NÃO. Executando a instalação sobre com xorg"
+    echo "Você escolheu NÃO. Executando a instalação com xorg"
 echo
 echo
 echo    
     sudo pacman -Syu --noconfirm ; sudo pacman -S --needed\
     git wget unzip gum rofi wofi unrar okular gwenview\
     waybar swww dolphin dolphin-plugins ark firefox\
-    swaync loupe xdg-desktop-portal xdg-desktop-portal-gnome\
+    loupe xdg-desktop-portal xdg-desktop-portal-gnome\
     xdg-desktop-portal-gtk xdg-desktop-portal-hyprland\
     xdg-desktop-portal-wlr xdg-user-dirs xdg-user-dirs-gtk\
     xdg-utils archlinux-xdg-menu btop ttf-font-awesome noto-fonts\
@@ -120,11 +120,11 @@ echo
 echo
 echo
 echo
-echo "Instalando o suporte ao aur-helper com paru"
+echo "Instalando o suporte ao aur-helper com yay"
 sleep 5
 echo
 echo
-    git clone https://aur.archlinux.org/paru-bin.git
+    git clone https://aur.archlinux.org/yay-bin.git
     cd paru-bin
     makepkg -si --noconfirm
     cd ..
@@ -140,7 +140,7 @@ echo
 sleep 10
 echo
 echo
-    paru -S \
+    yay -S \
     swayosd-git \
     waypaper \
     hyprswitch \
@@ -148,6 +148,7 @@ echo
     qt6ct-kde \
     grimblast \
     protonup-qt-bin \
+    swaync-git \
     ventoy \
     obs-studio-tytan652 \
     obs-vkcapture \

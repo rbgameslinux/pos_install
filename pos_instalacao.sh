@@ -151,6 +151,7 @@ echo
     protonup-qt-bin \
     swaync-git \
     ventoy-bin \
+    wlogout \
    # obs-studio-tytan652 \
    # obs-vkcapture \
     winff \

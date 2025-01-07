@@ -197,15 +197,20 @@ echo "Extraindo configurações nas suas devidas pastas"
 echo
 sleep 2
 
-        cd $HOME/pos_install
+cd $HOME/pos_install
 # tar -xzvf rodrigo_configs.tar.gz ; cp -r rodrigo_configs/* ~/.config
 
 if [ -f "$(pwd)/rodrigo_configs.tar.gz" ]; then
-    tar -xzvf "$(pwd)/rodrigo_configs.tar.gz" -C "$HOME/.config"
-    echo "Arquivo crodrigo_configs.tar.gz extraído para ~/.config com sucesso."
+    tar -xzvf "$(pwd)/rodrigo_configs.tar.gz" -C "$HOME/pos_install"
+    echo "Arquivo crodrigo_configs.tar.gz extraído para ~/pos_install com sucesso."
 else
     echo "rodrigo_configs.tar.gz não encontrado no diretório atual."
-fi    
+fi  
+echo
+sleep 2
+echo "Copiando p/.config"
+cp -r rodrigo_configs/* ~/.config
+
 sleep 2    
     #sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     

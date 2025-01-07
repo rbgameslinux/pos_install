@@ -234,12 +234,12 @@ echo
     vulkan-radeon libva-mesa-driver vulkan-icd-loader lib32-mesa\
     lib32-vulkan-radeon lib32-vulkan-icd-loader lib32-libva-mesa-driver\
     mesa-demos xorg-xdpyinfo amd-ucode mesa-utils glfw-wayland\
-    mesa llvm lib32-llvm vulkan-tools xf86-video-amdgpu mesa-vdpau\
-    lib32-mesa-vdpau lvm2 zip timeshift dosfstools lutris\
+    mesa llvm lib32-llvm vulkan-tools xf86-video-amdgpu xf86-video-ati\
+    mesa-vdpau\ lib32-mesa-vdpau lvm2 zip timeshift dosfstools lutris\
     linux-lts-headers linux-zen-headers steam gimp antimicrox\
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
     qt6-declarative qt6-svg gnome-disk-utility gnome-calendar gnome-calculator\
-    ksnip swaync hyprland x86-video-ati x86-video-amdgpu xorg-server xorg-xinit --noconfirm
+    ksnip swaync hyprland xorg-server xorg-xinit --noconfirm
 
     #instalar o yay p/ter suporte ao aur.
 echo

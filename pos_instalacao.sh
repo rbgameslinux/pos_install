@@ -78,9 +78,9 @@ echo
     lib32-libva-mesa-driver mesa-demos xorg-xdpyinfo amd-ucode\
     mesa-utils glfw-wayland vulkan-tools mesa-vdpau lib32-mesa-vdpau\
     lvm2 zip timeshift dosfstools linux-lts-headers linux-zen-headers\
-    steam lutris gimp antimicrox celluloid mpv vlc android-tools hyprutils\
-    hyprland-qtutils qt6-5compat qt6-declarative qt6-svg gnome-disk-utility\
-    gnome-calendar gnome-calculator ksnip --noconfirm 
+    steam lutris gimp antimicrox celluloid mpv vlc android-tools\
+    qt6-5compat qt6-declarative qt6-svg gnome-disk-utility\
+    gnome-calendar gnome-calculator ksnip swaync --noconfirm 
 
     #instalar o yay p/ter suporte ao aur.
 echo
@@ -115,7 +115,6 @@ echo
     qt6ct-kde \
     grimblast \
     swaylock-effects \
-    swaync-git \
     wlogout \
     protonup-qt-bin \
     ventoy-bin \
@@ -261,7 +260,7 @@ echo
     linux-lts-headers linux-zen-headers steam gimp antimicrox\
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
     qt6-declarative qt6-svg gnome-disk-utility gnome-calendar\
-    gnome-calculator ksnip --noconfirm
+    gnome-calculator ksnip swaync --noconfirm
 
     #instalar o yay p/ter suporte ao aur.
 echo
@@ -296,7 +295,6 @@ echo
     qt6ct-kde \
     grimblast \
     swaylock-effects \
-    swaync-git \
     wlogout \
     protonup-qt-bin \
     ventoy-bin \

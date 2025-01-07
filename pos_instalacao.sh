@@ -56,9 +56,9 @@ if [ "$resposta" == "s" ]; then
 echo
 echo
 echo   
- sudo pacman -Syu --noconfirm ; sudo pacman -R dunst --noconfirm ; sudo pacman -S --needed\
-    git wget unzip gum rofi wofi unrar okular gwenview\
-    waybar swww dolphin dolphin-plugins ark firefox\
+ sudo pacman -Syu --noconfirm ; sudo pacman -R dunst --noconfirm\
+    sudo pacman -S git wget unzip gum rofi wofi unrar okular\
+    waybar swww dolphin-plugins ark firefox\
     loupe xdg-desktop-portal xdg-desktop-portal-gnome\
     xdg-desktop-portal-gtk xdg-desktop-portal-hyprland\
     xdg-desktop-portal-wlr xdg-user-dirs xdg-user-dirs-gtk\
@@ -107,34 +107,13 @@ echo
 sleep 10
 echo
 echo
-    yay -S \
-    swayosd-git \
-    waypaper \
-    hyprswitch \
-    qt5ct-kde \
-    qt6ct-kde \
-    grimblast \
-    swaylock-effects \
-    wlogout \
-    protonup-qt-bin \
-    ventoy-bin \
-    obs-studio-tytan652 \
-    obs-vkcapture \
-    winff \
-    droidcam \
-    v4l2loopback-dc-dkms \
-   # google-chrome \
-   # brave-bin \
-    stremio \
-    opencl-amd \
-    deckboard-bin \
-    r-linux \
-    heroic-games-launcher-bin \
-    visual-studio-code-bin \
-    jamesdsp-pipewire-bin \
-    terabox-bin \
-    clipman \
-    clipse
+    yay -S swayosd-git waypaper hyprswitch qt5ct-kde qt6ct-kde grimblast swaylock-effects wlogout protonup-qt-bin winff clipman clipse
+    
+    #Rascunho instalar depois
+    
+    #ventoy-bin obs-studio-tytan652 obs-vkcapture droidcam v4l2loopback-dc-dkms google-chrome brave-bin stremio
+    #opencl-amd deckboard-bin r-linux heroic-games-launcher-bin visual-studio-code-bin jamesdsp-pipewire-bin terabox-bin
+    
 echo
 echo
 echo
@@ -234,8 +213,8 @@ elif [ "$resposta" == "n" ]; then
 echo
 echo
 echo    
-    sudo pacman -Syu --noconfirm ; sudo pacman -S --needed\
-    git wget unzip gum rofi wofi unrar okular gwenview\
+    sudo pacman -Syu --noconfirm\
+    sudo pacman -S git wget unzip gum rofi wofi unrar okular\
     waybar swww dolphin dolphin-plugins ark firefox\
     loupe xdg-desktop-portal xdg-desktop-portal-gnome\
     xdg-desktop-portal-gtk xdg-desktop-portal-hyprland\
@@ -259,8 +238,8 @@ echo
     lib32-mesa-vdpau lvm2 zip timeshift dosfstools lutris\
     linux-lts-headers linux-zen-headers steam gimp antimicrox\
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
-    qt6-declarative qt6-svg gnome-disk-utility gnome-calendar\
-    gnome-calculator ksnip swaync hyprland --noconfirm
+    qt6-declarative qt6-svg gnome-disk-utility gnome-calendar gnome-calculator\
+    ksnip swaync hyprland x86-video-ati x86-video-amdgpu xorg-server xorg-xinit --noconfirm
 
     #instalar o yay p/ter suporte ao aur.
 echo
@@ -287,34 +266,14 @@ echo
 sleep 10
 echo
 echo
-    yay -S \
-    swayosd-git \
-    waypaper \
-    hyprswitch \
-    qt5ct-kde \
-    qt6ct-kde \
-    grimblast \
-    swaylock-effects \
-    wlogout \
-    protonup-qt-bin \
-    ventoy-bin \
-    obs-studio-tytan652 \
-    obs-vkcapture \
-    winff \
-    droidcam \
-    v4l2loopback-dc-dkms \
-   # google-chrome \
-   # brave-bin \
-    stremio \
-    opencl-amd \
-    deckboard-bin \
-    r-linux \
-    heroic-games-launcher-bin \
-    visual-studio-code-bin \
-    jamesdsp-pipewire-bin \
-    terabox-bin \
-    clipman \
-    clipse
+    yay -S swayosd-git waypaper hyprswitch qt5ct-kde qt6ct-kde grimblast swaylock-effects wlogout protonup-qt-bin clipman clipse winff
+    
+    
+    #Rascunho instalar depois
+    
+    #ventoy-bin obs-studio-tytan652 obs-vkcapture droidcam v4l2loopback-dc-dkms google-chrome brave-bin stremio
+    #opencl-amd deckboard-bin r-linux heroic-games-launcher-bin visual-studio-code-bin jamesdsp-pipewire-bin terabox-bin
+    
 echo
 echo
 echo

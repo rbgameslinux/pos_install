@@ -260,7 +260,7 @@ echo
     linux-lts-headers linux-zen-headers steam gimp antimicrox\
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat\
     qt6-declarative qt6-svg gnome-disk-utility gnome-calendar\
-    gnome-calculator ksnip swaync --noconfirm
+    gnome-calculator ksnip swaync hyprland --noconfirm
 
     #instalar o yay p/ter suporte ao aur.
 echo

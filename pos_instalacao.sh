@@ -58,7 +58,7 @@ echo
 Install_pacman() {
     package=$1
     for i in {1..3}; do
-        if pacman -S --noconfirm --needed "$package"; then
+        if sudo pacman -S --noconfirm --needed "$package"; then
             echo "$package instalado com sucesso."
             break
         else
@@ -90,12 +90,10 @@ packages=(
   )
 
     #instalar o yay p/ter suporte ao aur.
-echo
-echo
+echo 
 echo
 echo "Instalando o suporte ao aur-helper com yay"
-sleep 5
-echo
+sleep 2
 echo
 cd $HOME/
     git clone https://aur.archlinux.org/yay-bin.git
@@ -104,14 +102,13 @@ cd $HOME/
     cd $HOME/
 echo
 echo
-sleep 7
+sleep 2
 echo
 echo
     #Instalar pacotes do aur com paru 
-echo "Por questões de segurança e falhas"
-echo "eu opitei por confirmar manualmente todos os pacotes do aur"
+echo "Instalando pacotes necesssarios do aur"
 echo
-sleep 8
+sleep 3
 echo
 echo
 install_yay() {
@@ -128,42 +125,42 @@ install_yay() {
 }
     package_yay=(
     swayosd-git waypaper hyprswitch qt5ct-kde qt6ct-kde grimblast swaylock-effects
-    wlogout protonup-qt-bin clipman clipse winff ventoy-bin obs-studio-tytan652
-    obs-vkcapture droidcam v4l2loopback-dc-dkms google-chrome brave-bin stremio
-    opencl-amd deckboard-bin r-linux heroic-games-launcher-bin visual-studio-code-bin
+    wlogout protonup-qt-bin clipman clipse winff ventoy-bin stremio
+    heroic-games-launcher-bin visual-studio-code-bin
     jamesdsp-pipewire-bin terabox-bin
     )
+
+    # Instalar depois  obs-studio-tytan652 obs-vkcapture droidcam v4l2loopback-dc-dkms google-chrome brave-bin
+    # opencl-amd deckboard-bin r-linux 
+    
 for pkg in "${package_yay[@]}"; do
     install_yay "$pkg"
 done    
         
-    #Rascunho instalar depois
-    
-    #
-    #
-    
-echo
-sleep 3
+echo "Adicionando usuario ao grupo wheel" 
+sleep 2
 echo
         # Obter o nome do usuário atual
     usuario=$(whoami)
-
+echo 
         # Adiciona o usuário ao grupo 'wheel'
     sudo usermod -aG wheel "$usuario"
 
         #Só rodar no terminal
     xdg-user-dirs-update 
-
-        #coloca o dolphin com padrão do sistema
+sleep 2
+echo "coloca o dolphin com padrão do sistema"
     xdg-mime default org.kde.dolphin.desktop inode/directoryxdg-mime default org.kde.dolphin.desktop inode/directory 
 
-        #Habilita o sddm
-
+ sleep 2      
+      #Habilita o sddm
+echo "Habilitando o sddm no sitema"
+sleep 2
     systemctl enable sddm.service
 echo
 echo "criando pastas e dando permissões"      
 echo
-sleep 5
+sleep 1
 echo
     sudo mkdir /mnt/Rodrigo000
     sudo mkdir /mnt/Rodrigo001
@@ -172,7 +169,7 @@ echo
     sudo mkdir /mnt/Rodrigo004
     sudo mkdir /mnt/Rodrigo005
     sudo mkdir /mnt/Rodrigo006
-sleep 3
+sleep 1
 echo
     sudo chmod + /mnt/Rodrigo000
     sudo chmod + /mnt/Rodrigo001
@@ -181,7 +178,7 @@ echo
     sudo chmod + /mnt/Rodrigo004
     sudo chmod + /mnt/Rodrigo005
     sudo chmod + /mnt/Rodrigo006
-sleep 3
+sleep 1
 echo
     sudo chown rodrigo:rodrigo /mnt//Rodrigo000
     sudo chown rodrigo:rodrigo /mnt//Rodrigo001
@@ -190,7 +187,7 @@ echo
     sudo chown rodrigo:rodrigo /mnt//Rodrigo004
     sudo chown rodrigo:rodrigo /mnt//Rodrigo005
     sudo chown rodrigo:rodrigo /mnt//Rodrigo006
-sleep 3
+sleep 2
 echo
 echo "Finalizado a criação de pastas em /mnt"
 echo
@@ -198,10 +195,10 @@ sleep 2
 echo
 echo "Extraindo configurações nas suas devidas pastas"
 echo
-sleep 3
+sleep 2
 
         cd $HOME/pos_install
-# tar -xzvf rodrigo_configs.tar.gz
+# tar -xzvf rodrigo_configs.tar.gz ; cp -r rodrigo_configs/* ~/.config
 
 if [ -f "$(pwd)/rodrigo_configs.tar.gz" ]; then
     tar -xzvf "$(pwd)/rodrigo_configs.tar.gz" -C "$HOME/.config"
@@ -209,7 +206,7 @@ if [ -f "$(pwd)/rodrigo_configs.tar.gz" ]; then
 else
     echo "rodrigo_configs.tar.gz não encontrado no diretório atual."
 fi    
-    
+sleep 2    
     #sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     
 if [ -f "$(pwd)/simple-sddm-2.tar.gz" ]; then
@@ -218,7 +215,7 @@ if [ -f "$(pwd)/simple-sddm-2.tar.gz" ]; then
 else
     echo "simple-sddm-2.tar.gz não encontrado no diretório atual."
 fi
-    
+sleep 2    
     #sudo tar -xzvf sddm.conf.tar.gz -C /etc/
 
 if [ -f "$(pwd)/sddm.conf.tar.gz" ]; then
@@ -229,14 +226,14 @@ else
 fi    
    
 echo    
-sleep 5
+sleep 2
 echo 
-    cp -r rodrigo_configs/* ~/.config
+    
     
 echo "Descompactação finalizada com sucesso"
 echo
 
-sleep 7
+sleep 1
 echo
 cd $HOME/
 echo
@@ -265,7 +262,7 @@ echo
 Install_pacman() {
     package=$1
     for i in {1..3}; do
-        if pacman -S --noconfirm --needed "$package"; then
+        if sudo pacman -S --noconfirm --needed "$package"; then
             echo "$package instalado com sucesso."
             break
         else
@@ -307,12 +304,12 @@ for pkg in "${packages[@]}"; do
 done
 echo
 echo    
-sleep 3
+sleep 2
     #instalar o yay p/ter suporte ao aur.
 echo
 echo
 echo "Instalando o suporte ao aur-helper com yay"
-sleep 5
+sleep 2
 echo
 echo
 cd $HOME/
@@ -322,14 +319,13 @@ cd $HOME/
     cd $HOME/
 echo
 echo
-sleep 7
+sleep 3
 echo
 echo
     #Instalar pacotes do aur com yay 
-echo "Por questões de segurança e falhas"
-echo "eu opitei por confirmar manualmente todos os pacotes do aur"
+echo "Instalando pacotes necessarios do aur"
 echo
-sleep 10
+sleep 3
 echo
 echo
 
@@ -347,11 +343,13 @@ install_yay() {
 }
     package_yay=(
     swayosd-git waypaper hyprswitch qt5ct-kde qt6ct-kde grimblast swaylock-effects
-    wlogout protonup-qt-bin clipman clipse winff ventoy-bin obs-studio-tytan652
-    obs-vkcapture droidcam v4l2loopback-dc-dkms google-chrome brave-bin stremio
-    opencl-amd deckboard-bin r-linux heroic-games-launcher-bin
-    visual-studio-code-bin jamesdsp-pipewire-bin terabox-bin
+    wlogout protonup-qt-bin clipman clipse winff ventoy-bin  stremio
+    heroic-games-launcher-bin visual-studio-code-bin jamesdsp-pipewire-bin terabox-bin
     )
+    
+     # fazer instalacao depois obs-studio-tytan652 obs-vkcapture droidcam v4l2loopback-dc-dkms 
+     # oogle-chrome brave-bin opencl-amd deckboard-bin r-linux 
+    
 for pkg in "${package_yay[@]}"; do
     install_yay "$pkg"
 done    
@@ -362,22 +360,28 @@ echo
         # Obter o nome do usuário atual
     usuario=$(whoami)
 
+echo "Adicionando usuário ao grupo 'wheel'"
+sleep 2
         # Adiciona o usuário ao grupo 'wheel'
     sudo usermod -aG wheel "$usuario"
 
         #Só rodar no terminal
     xdg-user-dirs-update 
 
+echo "Coloca o dolphin com padrão do sistema"
+sleep 2
         #coloca o dolphin com padrão do sistema
     xdg-mime default org.kde.dolphin.desktop inode/directoryxdg-mime default org.kde.dolphin.desktop inode/directory 
 
+echo "Habilitando o sddm no sitema"
+sleep 2
         #Habilita o sddm
 
     systemctl enable sddm.service
 echo
 echo "criando pastas e dando permissões"      
 echo
-sleep 5
+sleep 2
 echo
     sudo mkdir /mnt/Rodrigo000
     sudo mkdir /mnt/Rodrigo001
@@ -386,7 +390,7 @@ echo
     sudo mkdir /mnt/Rodrigo004
     sudo mkdir /mnt/Rodrigo005
     sudo mkdir /mnt/Rodrigo006
-sleep 3
+sleep 1
 echo
     sudo chmod + /mnt/Rodrigo000
     sudo chmod + /mnt/Rodrigo001
@@ -395,7 +399,7 @@ echo
     sudo chmod + /mnt/Rodrigo004
     sudo chmod + /mnt/Rodrigo005
     sudo chmod + /mnt/Rodrigo006
-sleep 3
+sleep 1
 echo
     sudo chown rodrigo:rodrigo /mnt//Rodrigo000
     sudo chown rodrigo:rodrigo /mnt//Rodrigo001
@@ -404,7 +408,7 @@ echo
     sudo chown rodrigo:rodrigo /mnt//Rodrigo004
     sudo chown rodrigo:rodrigo /mnt//Rodrigo005
     sudo chown rodrigo:rodrigo /mnt//Rodrigo006
-sleep 3
+sleep 1
 echo
 echo "Finalizado a criação de pastas em /mnt"
 echo
@@ -412,10 +416,10 @@ sleep 2
 echo
 echo "Extraindo configurações nas suas devidas pastas"
 echo
-sleep 3
+sleep 2
 
     cd $HOME/pos_install
-# tar -xzvf rodrigo_configs.tar.gz
+# tar -xzvf rodrigo_configs.tar.gz ; cp -r rodrigo_configs/* ~/.config
 
 if [ -f "$(pwd)/rodrigo_configs.tar.gz" ]; then
     tar -xzvf "$(pwd)/rodrigo_configs.tar.gz" -C "$HOME/.config"
@@ -423,7 +427,9 @@ if [ -f "$(pwd)/rodrigo_configs.tar.gz" ]; then
 else
     echo "rodrigo_configs.tar.gz não encontrado no diretório atual."
 fi    
-    
+
+sleep 2
+
     #sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
     
 if [ -f "$(pwd)/simple-sddm-2.tar.gz" ]; then
@@ -432,7 +438,9 @@ if [ -f "$(pwd)/simple-sddm-2.tar.gz" ]; then
 else
     echo "simple-sddm-2.tar.gz não encontrado no diretório atual."
 fi
-    
+
+sleep 2
+
     #sudo tar -xzvf sddm.conf.tar.gz -C /etc/
 
 if [ -f "$(pwd)/sddm.conf.tar.gz" ]; then
@@ -443,18 +451,20 @@ else
 fi    
    
 echo    
-sleep 5
+sleep 2
 echo 
-    cp -r rodrigo_configs/* ~/.config
+    
     
 echo "Descompactação finalizada com sucesso"
 echo
 
-sleep 7
+sleep 2
 echo
 cd $HOME/
 echo
 echo
+echo "Removendo os arquivos baixados"
+sleep 3
 
 rm -fr pos_install
 

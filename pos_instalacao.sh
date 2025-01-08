@@ -85,7 +85,7 @@ packages=(
     lib32-libva-mesa-driver mesa-demos xorg-xdpyinfo amd-ucode ksnip swaync
     mesa-utils glfw-wayland vulkan-tools mesa-vdpau lib32-mesa-vdpau
     lvm2 zip timeshift dosfstools linux-lts-headers linux-zen-headers
-    steam lutris gimp antimicrox celluloid mpv vlc android-tools
+    steam lutris gimp antimicrox celluloid mpv vlc android-tools filelight
     qt6-5compat qt6-declarative qt6-svg gnome-disk-utility epapirus-icon-theme
   )
 
@@ -211,6 +211,7 @@ echo
 sleep 2
 echo "Copiando p/.config"
 cp -r $HOME/rodrigo_configs/* ~/.config
+rm -fr $HOME/rodrigo_configs
 
 sleep 2    
     #sudo tar -xzvf simple-sddm-2.tar.gz -C /usr/share/sddm/themes/
@@ -292,7 +293,7 @@ packages=(
     kio kde-cli-tools sddm xorg network-manager-applet
     exfat-utils dosfstools btrfs-progs xfsprogs jfsutils f2fs-tools
     reiserfsprogs nilfs-utils udftools e2fsprogs kitty gedit gparted
-    mangohud telegram-desktop discord wine
+    mangohud telegram-desktop discord wine filelight
     wine-gecko wine-mono winetricks curl deluge-gtk
     vulkan-radeon libva-mesa-driver vulkan-icd-loader lib32-mesa
     lib32-vulkan-radeon lib32-vulkan-icd-loader lib32-libva-mesa-driver
@@ -438,6 +439,7 @@ echo
 sleep 2
 echo "Copiando p/.config"
 cp -r $HOME/rodrigo_configs/* ~/.config  
+rm -fr $HOME/rodrigo_configs
 
 sleep 2
 

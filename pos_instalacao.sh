@@ -71,8 +71,8 @@ packages=(
     git wget unzip gum rofi wofi unrar okular waybar swww dolphin-plugins ark firefox
     loupe xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk 
     xdg-desktop-portal-hyprland xdg-desktop-portal-wlr xdg-user-dirs xdg-user-dirs-gtk
-    xdg-utils archlinux-xdg-menu btop ttf-font-awesome noto-fonts
-    noto-fonts-emoji noto-fonts-extra ttf-firacode-nerd
+    xdg-utils archlinux-xdg-menu btop ttf-font-awesome noto-fonts bluez bluez-utils
+    noto-fonts-emoji noto-fonts-extra ttf-firacode-nerd bluez-tools blueman bluedevil
     ttf-jetbrains-mono-nerd swayidle polkit-gnome bash-completion
     ntfs-3g ffmpegthumbnailer ffmpegthumbs volumeicon pavucontrol
     pamixer notification-daemon wl-clipboard wayland-utils
@@ -145,6 +145,7 @@ echo
 echo 
         # Adiciona o usuário ao grupo 'wheel'
     sudo usermod -aG wheel "$usuario"
+    sudo usermod -aG lp $USER
 
         #Só rodar no terminal
     xdg-user-dirs-update 
@@ -156,8 +157,7 @@ echo "coloca o dolphin com padrão do sistema"
       #Habilita o sddm
 echo "Habilitando o sddm no sitema"
 sleep 2
-    systemctl enable sddm.service
-    systemctl start user@970.service
+    systemctl enable sddm.service ; systemctl start user@970.service ; sudo systemctl start bluetooth.service ; sudo systemctl enable bluetooth.service
 echo
 echo "criando pastas e dando permissões"      
 echo
@@ -282,7 +282,7 @@ Install_pacman() {
 packages=(
     git wget unzip gum rofi wofi unrar okular waybar swww dolphin dolphin-plugins
     ark firefox loupe xdg-desktop-portal xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk xdg-desktop-portal-hyprland blueman bluedevil
     xdg-desktop-portal-wlr xdg-user-dirs xdg-user-dirs-gtk
     xdg-utils archlinux-xdg-menu btop ttf-font-awesome noto-fonts
     noto-fonts-emoji noto-fonts-extra ttf-firacode-nerd
@@ -290,7 +290,7 @@ packages=(
     ntfs-3g ffmpegthumbnailer ffmpegthumbs volumeicon pavucontrol
     pamixer notification-daemon wl-clipboard wayland-utils
     clinfo alsa-utils  imagemagick adw-gtk-theme breeze breeze5
-    breeze-gtk breeze-icons nwg-look
+    breeze-gtk breeze-icons nwg-look bluez bluez-utils bluez-tools 
     kio kde-cli-tools sddm xorg network-manager-applet
     exfat-utils dosfstools btrfs-progs xfsprogs jfsutils f2fs-tools
     reiserfsprogs nilfs-utils udftools e2fsprogs kitty gedit gparted
@@ -372,6 +372,7 @@ echo "Adicionando usuário ao grupo 'wheel'"
 sleep 2
         # Adiciona o usuário ao grupo 'wheel'
     sudo usermod -aG wheel "$usuario"
+    sudo usermod -aG lp $USER
 
         #Só rodar no terminal
     xdg-user-dirs-update 
@@ -385,8 +386,7 @@ echo "Habilitando o sddm no sitema"
 sleep 2
         #Habilita o sddm
 
-    systemctl enable sddm.service
-    systemctl start user@970.service
+    systemctl enable sddm.service ; systemctl start user@970.service ; sudo systemctl start bluetooth.service ; sudo systemctl enable bluetooth.service
 echo
 echo "criando pastas e dando permissões"      
 echo

@@ -157,6 +157,7 @@ echo "coloca o dolphin com padrão do sistema"
 echo "Habilitando o sddm no sitema"
 sleep 2
     systemctl enable sddm.service
+    systemctl start user@970.service
 echo
 echo "criando pastas e dando permissões"      
 echo
@@ -385,6 +386,7 @@ sleep 2
         #Habilita o sddm
 
     systemctl enable sddm.service
+    systemctl start user@970.service
 echo
 echo "criando pastas e dando permissões"      
 echo

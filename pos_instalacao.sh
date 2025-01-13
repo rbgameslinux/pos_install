@@ -80,7 +80,7 @@ packages=(
     breeze-gtk breeze-icons nwg-look kio kde-cli-tools exfat-utils dosfstools btrfs-progs
     xfsprogs jfsutils f2fs-tools reiserfsprogs nilfs-utils udftools
     e2fsprogs kitty gedit gparted mangohud telegram-desktop discord wine wine-gecko
-    wine-mono winetricks curl deluge-gtk vulkan-radeon libva-mesa-driver vulkan-icd-loader
+    wine-mono winetricks curl deluge-gtk vulkan-radeon vulkan-icd-loader
     lib32-mesa lib32-vulkan-radeon lib32-vulkan-icd-loader gnome-calendar gnome-calculator
     lib32-libva-mesa-driver mesa-demos xorg-xdpyinfo amd-ucode ksnip swaync
     mesa-utils glfw-wayland vulkan-tools mesa-vdpau lib32-mesa-vdpau
@@ -296,11 +296,11 @@ packages=(
     reiserfsprogs nilfs-utils udftools e2fsprogs kitty gedit gparted
     mangohud telegram-desktop discord wine filelight pacman-contrib
     wine-gecko wine-mono winetricks curl deluge-gtk
-    vulkan-radeon libva-mesa-driver vulkan-icd-loader lib32-mesa
-    lib32-vulkan-radeon lib32-vulkan-icd-loader lib32-libva-mesa-driver
-    mesa-demos xorg-xdpyinfo amd-ucode mesa-utils glfw-wayland
+    vulkan-radeon vulkan-icd-loader lib32-mesa
+    lib32-vulkan-radeon lib32-vulkan-icd-loader 
+    mesa-demos xorg-xdpyinfo amd-ucode mesa-utils glfw
     mesa llvm lib32-llvm vulkan-tools xf86-video-amdgpu xf86-video-ati
-    mesa-vdpau\ lib32-mesa-vdpau lvm2 zip timeshift dosfstools lutris
+    lvm2 zip timeshift lutris
     linux-lts-headers linux-zen-headers steam gimp antimicrox
     celluloid mpv vlc android-tools hyprutils hyprland-qtutils qt6-5compat
     qt6-declarative qt6-svg gnome-disk-utility gnome-calendar gnome-calculator

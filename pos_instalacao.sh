@@ -77,7 +77,7 @@ packages=(
     ntfs-3g ffmpegthumbnailer ffmpegthumbs volumeicon pavucontrol
     pamixer notification-daemon wl-clipboard wayland-utils pacman-contrib
     clinfo alsa-utils  imagemagick adw-gtk-theme breeze breeze5
-    breeze-gtk breeze-icons nwg-look kio kde-cli-tools exfat-utils dosfstools btrfs-progs
+    breeze-gtk breeze-icons nwg-look kio kde-cli-tools exfat-utils btrfs-progs
     xfsprogs jfsutils f2fs-tools reiserfsprogs nilfs-utils udftools
     e2fsprogs kitty gedit gparted mangohud telegram-desktop discord wine wine-gecko
     wine-mono winetricks curl deluge-gtk vulkan-radeon vulkan-icd-loader
@@ -292,7 +292,7 @@ packages=(
     clinfo alsa-utils  imagemagick adw-gtk-theme breeze breeze5
     breeze-gtk breeze-icons nwg-look bluez bluez-utils bluez-tools 
     kio kde-cli-tools sddm xorg network-manager-applet
-    exfat-utils dosfstools btrfs-progs xfsprogs jfsutils f2fs-tools
+    exfat-utils btrfs-progs xfsprogs jfsutils f2fs-tools
     reiserfsprogs nilfs-utils udftools e2fsprogs kitty gedit gparted
     mangohud telegram-desktop discord wine filelight pacman-contrib
     wine-gecko wine-mono winetricks curl deluge-gtk

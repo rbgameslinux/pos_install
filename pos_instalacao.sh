@@ -55,6 +55,7 @@ if [ "$resposta" == "s" ]; then
     echo "Você escolheu SIM. Executando a instalação de adicionais"
 echo
 echo
+sudo pcman -R dunst --noconfirm ; sudo pacman -Syu --noconfirm
 Install_pacman() {
     package=$1
     for i in {1..3}; do

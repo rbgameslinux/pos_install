@@ -74,7 +74,7 @@ packages=(
     xdg-desktop-portal-hyprland xdg-desktop-portal-wlr xdg-user-dirs xdg-user-dirs-gtk
     xdg-utils archlinux-xdg-menu btop ttf-font-awesome noto-fonts bluez bluez-utils
     noto-fonts-emoji noto-fonts-extra ttf-firacode-nerd bluez-tools blueman bluedevil
-    ttf-jetbrains-mono-nerd swayidle polkit-gnome bash-completion
+    ttf-jetbrains-mono-nerd swayidle polkit-gnome bash-completion lm_sensors
     ntfs-3g ffmpegthumbnailer ffmpegthumbs volumeicon pavucontrol
     pamixer notification-daemon wl-clipboard wayland-utils pacman-contrib
     clinfo alsa-utils  imagemagick adw-gtk-theme breeze breeze5
@@ -297,7 +297,7 @@ packages=(
     reiserfsprogs nilfs-utils udftools e2fsprogs kitty gedit gparted
     mangohud telegram-desktop discord wine filelight pacman-contrib
     wine-gecko wine-mono winetricks curl deluge-gtk
-    vulkan-radeon vulkan-icd-loader lib32-mesa
+    vulkan-radeon vulkan-icd-loader lib32-mesa lm_sensors
     lib32-vulkan-radeon lib32-vulkan-icd-loader 
     mesa-demos xorg-xdpyinfo amd-ucode mesa-utils glfw
     mesa llvm lib32-llvm vulkan-tools xf86-video-amdgpu xf86-video-ati
